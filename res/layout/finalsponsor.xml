@@ -1,0 +1,628 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/blue">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false" >
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:orientation="vertical"
+            android:weightSum="3" >
+
+            <ImageView
+                android:id="@+id/ivKabout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="2"
+                android:background="#00000000"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/klogo" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="#44000000"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Sponsors"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#BBffffff" >
+            </TextView>
+
+            <ImageView
+                android:id="@+id/ivGroupon"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="#44000000"
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/s1" >
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivMicro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/s2" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/tvAmeex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/s3" >
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivMicro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/s4" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/tvAmeex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/s5" >
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivMicro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/s6" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/tvAmeex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/s7" >
+                </ImageView>
+            </LinearLayout>
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivMicro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/s8" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/tvAmeex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/s9" >
+                </ImageView>
+            </LinearLayout>
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivMicro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/s10" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/tvAmeex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/s11" >
+                </ImageView>
+            </LinearLayout>
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivMicro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/s12" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/tvAmeex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/smspartner_web" >
+                </ImageView>
+            </LinearLayout>
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivMicro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/tvAmeex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/hind" >
+                </ImageView>
+            </LinearLayout>
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivMicro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/tvs" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/tvAmeex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/twenty19" >
+                </ImageView>
+            </LinearLayout>
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivMicro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp1" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/tvAmeex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp2" >
+                </ImageView>
+            </LinearLayout>
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivMicro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp3" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/tvAmeex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp4" >
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivMicro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp5" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/tvAmeex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp6" >
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivMicro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp7" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/tvAmeex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp8" >
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivMicro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp9" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/tvAmeex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp10" >
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivMicro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp20" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/tvAmeex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp12" >
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivMicro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp13" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/tvAmeex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp14" >
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivMicro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp15" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/tvAmeex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp16" >
+                </ImageView>
+            </LinearLayout>
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivMicro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp17" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/tvAmeex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp18" >
+                </ImageView>
+            </LinearLayout>
+                          <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#00000000"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivMicro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#44000000"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/sp11">
+                </ImageView>
+
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+    </FrameLayout>
+
+</ScrollView>

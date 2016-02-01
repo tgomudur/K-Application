@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="drawer">
+        <item>New York</item>
+        <item>Tokyo</item>
+        <item>London</item>
+    </string-array>
+    <array name="city_images">
+        <item>@drawable/godspeed1</item>
+        <item>@drawable/godspeed1</item>
+        <item>@drawable/godspeed1</item>
+    </array>
+    
+</resources>

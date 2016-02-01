@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlContactPage1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/bg_card"
+    android:orientation="horizontal"
+    android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip"
+                 android:background="@drawable/bg_card"
+                android:padding="3dip" >
+
+                <ImageView
+                    android:id="@+id/list_image1"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:src="@drawable/contactus" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/thumbnail"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="Tharun"
+                android:textColor="#040404"
+                android:textSize="20dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/tvNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvName"
+                android:layout_marginTop="1dip"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="8870118202"
+                android:textColor="#343434"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:id="@+id/rightImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/sym_action_call" />
+        </RelativeLayout>

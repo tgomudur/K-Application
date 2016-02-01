@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Kurukshetra</string>
+   
+    <string name="notitle"></string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="new_york_city">New York City</string>
+    <string name="activity_title_scrollview">ScrollView sample</string>
+    <string name="activity_title_listview">ListView sample</string>
+    <string name="activity_title_light_bg">Light background sample</string>
+    <string name="activity_title_light_ab">Light action bar sample</string>
+    <string name="activity_title_fragment">Fragment sample</string>
+    <string name="activity_title_no_parallax">No parallax sample</string>
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">close_drawer</string>
+    <string name="activity_title_navigation">Navigation Drawer Example</string>
+    <string name="loren_ipsum">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis. Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Ut varius tincidunt libero. Phasellus dolor. Maecenas vestibulum mollis diam. Pellentesque ut neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. In ac felis quis tortor malesuada pretium. Pellentesque auctor neque nec urna. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Aenean viverra rhoncus pede. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non enim eleifend felis pretium feugiat. Vivamus quis mi. Phasellus a est. Phasellus magna. In hac habitasse platea dictumst. Curabitur at lacus ac velit ornare lobortis. Curabitur a felis in nunc fringilla tristique.</string>
+    <string name="choose_city">Choose a city</string>
+    <string name="noboringactionbar_title">Battle of Brains</string>
+    <string name="sample_content">Sample of dragging the content.\nThe menu consists of a ListView, for which the
+        active position is saved through configuration changes.\nAdditionally, if the menu is open, a back press will
+        close it.</string>
+    <string name="sample_window">Sample of dragging the entire window.\nThe menu is a simple ScrollView, with a click
+        listener set on each item.\nThe drawer will animate slightly open, to make it more discoverable.\nAdditionally,
+        if the menu is open, a back press will close it.</string>
+    <string name="sample_listactivity">Sample of how to use the drawer with ListActivity.\nWhen running on ICS or
+        greater, the ActionBar up button will blink until clicked by the user. This is done to make the menu more
+        discoverable.\nAdditionally, if the menu is open, a back press will close it.</string>
+    <string name="sample_rightmenu">This sample shows how to position the menu to the right of the content.\nRun on
+        an API14+ device to see how it interacts with the overflow button.</string>
+    <string name="sample_topmenu">This sample shows how to position the menu above the content.</string>
+    <string name="sample_bottommenu">This sample shows how to position the menu below the content.</string>
+    <string name="sample_layout">This sample shows how to use the drawer in a layout file.
+        \nThe top drawer is used in this sample.</string>
+    <string name="sample_static">This sample shows how to attach a drawer that is always visible.</string>
+    <string name="standard">Standard</string>
+    <string name="simple_list_example">Simple List Example</string>
+    <string name="simple_grid_example">Simple Grid Example</string>
+
+    <string-array name="jazzy_effects">
+        <item>@string/standard</item>
+        <item>Grow</item>
+        <item>Cards</item>
+        <item>Curl</item>
+        <item>Wave</item>
+        <item>Flip</item>
+        <item>Fly</item>
+        <item>ReverseFly</item>
+        <item>Helix</item>
+        <item>Fan</item>
+        <item>Tilt</item>
+        <item>Zipper</item>
+        <item>Fade</item>
+        <item>Twirl</item>
+        <item>SlideIn</item>
+    </string-array>
+
+    <string name="button_hide">Gesture up</string>
+    <string name="button_show">Show Single Action Items</string>
+    <string name="button_blocked">Blocked button</string>
+    <string name="button_go_to_multiple_items_activity">Show Multiple Action Items</string>
+    <string name="button_go_to_multiple_showcases_activity">Show Multiple Showcases</string>
+    <string name="button_go_to_showcase_fragment_activity">Show Fragment Activity</string>
+    <string name="button_like">Like it!</string>
+    <string name="error_message">"Your Android version is &lt; Honeycomb. You need actionbar support to run this sample."</string>
+    <string name="like_message">PURRRRR!</string>
+    <string name="dismissed_message">The last showcaseView was dismissed!</string>
+    <string name="showcase_main_title">Showcase Sample</string>
+    <string name="showcase_main_message">"When the ShowcaseView is showing, pressing the button will show a gesture. When it is hidden it\'ll go to another Activity."</string>
+    <string name="showcase_simple_title">ShowcaseView &amp; action items</string>
+    <string name="showcase_simple_message">Try touching action items to showcase them</string>
+    <string name="showcase_spinner_title">Navigation Spinner</string>
+    <string name="showcase_spinner_message">Use this spinner to navigate to other areas of the app.</string>
+    <string name="showcase_overflow_title">Overflow Menu</string>
+    <string name="showcase_overflow_message">Access additional options here.</string>
+    <string name="showcase_image_title">Look how cute it is!</string>
+    <string name="showcase_image_message">This is a lovely kitten.</string>
+    <string name="showcase_like_title">Like button</string>
+    <string name="showcase_like_message">Click the button if you like kittens.</string>
+    <string name="showcase_fragment_title">ShowcaseView and Fragments?</string>
+    <string name="showcase_fragment_message">Click the button to find out whether this works with Fragments, too.</string>
+    <string name="does_really_work_with_fragments">Show toast</string>
+    <string name="it_does_work">It does work with Fragments. :)</string>
+    <string name="action_contact">Contact</string>
+
+</resources>

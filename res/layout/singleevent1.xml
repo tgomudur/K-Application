@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/llEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#c0c0c0"
+        android:orientation="vertical"
+        android:weightSum="100" >
+
+          
+
+        <RelativeLayout
+            android:id="@+id/rlmaps"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/map1"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <!-- ListRow Left sied Thumbnail image -->
+
+
+            <!--
+            <LinearLayout
+                android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/image_bg"
+                android:padding="3dip" >
+
+              <ImageView
+                    android:id="@+id/list_image2"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/maps" /> 
+            </LinearLayout>
+            -->
+
+
+            <!-- Title Of Song -->
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mycompass" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_marginLeft="15dip"
+                android:gravity="left"
+                android:text="Venue : Anna University"
+                android:textColor="#040404"
+                android:textSize="18dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/tvmap"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:gravity="center"
+                android:text="Take Me There!"
+                android:textColor="#343434"
+                android:textSize="15dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlcontact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <!-- ListRow Left sied Thumbnail image -->
+
+            <LinearLayout
+                android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/bg_card"
+                android:padding="3dip" >
+
+                <ImageView
+                    android:id="@+id/list_image"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:src="@drawable/contactus" />
+            </LinearLayout>
+
+            <!-- Title Of Song -->
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/thumbnail"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="Contact :"
+                android:textColor="#040404"
+                android:textSize="20dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <!-- Artist Name -->
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="1dip"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="Tharun : 9445426880"
+                android:textColor="#343434"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/sym_action_call" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlReminder"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/listPreferredItemHeight"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal" >
+
+            <!-- ListRow Left sied Thumbnail image -->
+
+            <LinearLayout
+                android:id="@+id/thumbnail1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:orientation="horizontal"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/bg_card"
+                android:padding="3dip" >
+            </LinearLayout>
+
+            <!-- Title Of Song -->
+
+
+<!--             Artist Name -->
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="1dip"
+                android:layout_toRightOf="@+id/thumbnail1"
+                android:text=""
+                android:textColor="#343434"
+                android:textSize="15dip" />
+
+            <!--
+                        <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@android:drawable/sym_action_call" />
+            -->
+
+            <ImageView
+                android:id="@+id/checkBox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:id="@+id/list_image1"
+                android:layout_width="50dip"
+                android:layout_height="60dp"
+                android:layout_alignLeft="@+id/thumbnail1"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/bell" />
+			<TextView
+                android:id="@+id/artist1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="1dip"
+                android:layout_marginLeft="60dip"
+                android:text="Tharun : 9445426880"
+                android:textColor="#343434"
+                android:textSize="15dip" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/checkBox1"
+                android:layout_alignTop="@+id/list_image1"
+                android:layout_marginLeft="60dip"
+                android:text="Remind Me"
+                android:textColor="#040404"
+                android:textSize="20dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="2dp"
+            android:background="#b3b3b3"
+            android:orientation="vertical" >
+
+            <!--
+             <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/windowBackground"
+            android:orientation="vertical"
+            android:padding="8dip" >
+                
+
+                <TextView
+                    android:id="@+id/descri"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:background="@drawable/bg_card"
+                    android:padding="3dp"
+                    android:textAppearance="@android:style/TextAppearance.Medium" />
+            -->
+            <TextView
+                    android:id="@+id/descri"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:background="@drawable/bg_card"
+                    android:padding="10dp"
+                   
+                    android:textAppearance="@android:style/TextAppearance.Medium" />
+
+            <TextView
+                android:id="@+id/briefdescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:gravity="clip_horizontal"
+                android:padding="10dp"
+                
+                android:text="@string/loren_ipsum"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+       
+</LinearLayout>
+</LinearLayout>
+</ScrollView>

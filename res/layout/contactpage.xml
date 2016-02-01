@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="right"
+    android:background="#976543" >
+
+<FrameLayout 
+    
+   
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff" >
+    
+    
+
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="4dp"
+        android:background="#000000"
+        android:orientation="vertical" >
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="100dip" 
+		android:layout_marginLeft="6dp"
+		android:layout_marginRight="6dp"
+		android:layout_marginTop="4dp"
+		android:layout_marginBottom="4dp"
+		android:background="@drawable/bg_card"
+		android:baselineAligned="false">
+		<!-- Card Contents go here -->
+    <LinearLayout
+        android:layout_width="0dip"
+		android:layout_height="match_parent" 
+		android:paddingLeft="6dp"
+		android:paddingRight="6dp"
+		android:paddingTop="4dp"
+		android:paddingBottom="4dp"
+		android:layout_weight="100">
+
+		<TextView
+		    android:id="@+id/imagetext"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_gravity="center|right"
+		    android:layout_weight="53.44"
+		    android:background="@drawable/con2"
+		    android:padding="5dp" 
+		    />
+
+	</LinearLayout>
+	</LinearLayout>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="100dip" 
+		android:layout_marginLeft="6dp"
+		android:layout_marginRight="6dp"
+		android:layout_marginTop="4dp"
+		android:layout_marginBottom="4dp"
+		android:background="@drawable/bg_card">
+
+		<!-- Card Contents go here -->
+<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_weight="100"
+	    android:paddingBottom="4dp"
+	    android:paddingLeft="6dp"
+	    android:paddingRight="6dp"
+	    android:paddingTop="4dp" 
+	    android:weightSum="100">
+
+	    <TextView
+	        android:id="@+id/number1"
+	        android:layout_width="220dp"
+	        android:layout_height="fill_parent"
+	        android:background="#457aa8"
+	        android:ems="10"
+	        android:padding="5dp"
+	        android:textColor="#ffffff"
+	        android:layout_weight="20"
+	        android:textSize="18dip"
+	        android:text="Events :\n\n     9659382834" />
+
+	    <ImageButton
+	        android:id="@+id/call1"
+	        android:layout_width="50dp"
+	        android:layout_height="fill_parent"
+	        android:padding="5dp"
+	        android:layout_weight="80"
+	        android:src="@android:drawable/sym_action_call" />
+
+	</LinearLayout>
+	</LinearLayout>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="100dip" 
+		android:layout_marginLeft="6dp"
+		android:layout_marginRight="6dp"
+		android:layout_marginTop="4dp"
+		android:layout_marginBottom="4dp"
+		android:background="@drawable/bg_card">
+
+		<!-- Card Contents go here -->
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_weight="100"
+	    android:paddingBottom="4dp"
+	    android:paddingLeft="6dp"
+	    android:paddingRight="6dp"
+	    android:paddingTop="4dp" 
+	    android:weightSum="100">
+
+	    <TextView
+	        android:id="@+id/number2"
+	        android:layout_width="220dp"
+	        android:layout_height="fill_parent"
+	        android:background="#457aa8"
+	        android:ems="10"
+	        android:padding="5dp"
+	        android:textColor="#ffffff"
+	        android:layout_weight="20"
+	        android:textSize="18dip"
+	        android:text="Events :\n\n     9659382834" />
+
+	    <ImageButton
+	        android:id="@+id/call2"
+	        android:layout_width="50dp"
+	        android:layout_height="fill_parent"
+	        android:padding="5dp"
+	        android:layout_weight="80"
+	        android:src="@android:drawable/sym_action_call" />
+
+	</LinearLayout>
+	</LinearLayout>
+	
+		<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="100dip" 
+		android:layout_marginLeft="6dp"
+		android:layout_marginRight="6dp"
+		android:layout_marginTop="4dp"
+		android:layout_marginBottom="4dp"
+		android:background="@drawable/bg_card">
+
+		<!-- Card Contents go here -->
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_weight="100"
+	    android:paddingBottom="4dp"
+	    android:paddingLeft="6dp"
+	    android:paddingRight="6dp"
+	    android:paddingTop="4dp" 
+	    android:weightSum="100">
+
+	    <TextView
+	        android:id="@+id/number3"
+	        android:layout_width="220dp"
+	        android:layout_height="fill_parent"
+	        android:background="#847568"
+	        android:ems="10"
+	        android:padding="5dp"
+	        android:layout_weight="20"
+	        android:textColor="#ffffff"
+	        android:textSize="18dip"
+	        android:text="Workshops:\n\n    9176206884" />
+
+	    <ImageButton
+	        android:id="@+id/call3"
+	        android:layout_width="50dp"
+	        android:layout_height="fill_parent"
+	        android:padding="5dp"
+	        android:layout_weight="80"
+	        android:src="@android:drawable/sym_action_call" />
+
+	</LinearLayout>
+	</LinearLayout>
+	
+		<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="100dip" 
+		android:layout_marginLeft="6dp"
+		android:layout_marginRight="6dp"
+		android:layout_marginTop="4dp"
+		android:layout_marginBottom="4dp"
+		android:background="@drawable/bg_card">
+
+		<!-- Card Contents go here -->
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_weight="100"
+	    android:paddingBottom="4dp"
+	    android:paddingLeft="6dp"
+	    android:paddingRight="6dp"
+	    android:paddingTop="4dp" 
+	    android:weightSum="100">
+
+	    <TextView
+	        android:id="@+id/number4"
+	        android:layout_width="220dp"
+	        android:layout_height="fill_parent"
+	        android:background="#968989"
+	        android:ems="10"
+	        android:padding="5dp"
+	        android:layout_weight="20"
+	        android:textColor="#ffffff"
+	        android:textSize="18dip"
+	        android:text="Guest Lectures:\n\n    9842521198" />
+
+	    <ImageButton
+	        android:id="@+id/call4"
+	        android:layout_width="50dp"
+	        android:layout_height="fill_parent"
+	        android:padding="5dp"
+	        android:layout_weight="80"
+	        android:src="@android:drawable/sym_action_call" />
+
+	</LinearLayout>
+	</LinearLayout>
+	
+			<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="100dip" 
+		android:layout_marginLeft="6dp"
+		android:layout_marginRight="6dp"
+		android:layout_marginTop="4dp"
+		android:layout_marginBottom="4dp"
+		android:background="@drawable/bg_card">
+
+		<!-- Card Contents go here -->
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_weight="100"
+	    android:paddingBottom="4dp"
+	    android:paddingLeft="6dp"
+	    android:paddingRight="6dp"
+	    android:paddingTop="4dp" 
+	    android:weightSum="100">
+
+	    <TextView
+	        android:id="@+id/number5"
+	        android:layout_width="220dp"
+	        android:layout_height="fill_parent"
+	        android:background="#ab0d0d"
+	        android:ems="10"
+	        android:padding="5dp"
+	        android:textColor="#ffffff"
+	        android:textSize="18sp"
+	        android:layout_weight="20"
+	        android:text="XCEED:\n\n    9566607666" />
+
+	    <ImageButton
+	        android:id="@+id/call5"
+	        android:layout_width="50dp"
+	        android:layout_height="fill_parent"
+	        android:padding="5dp"
+	        android:layout_weight="80"
+	        android:src="@android:drawable/sym_action_call" />
+
+	</LinearLayout>
+	</LinearLayout>
+	
+					<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="100dip" 
+		android:layout_marginLeft="6dp"
+		android:layout_marginRight="6dp"
+		android:layout_marginTop="4dp"
+		android:layout_marginBottom="4dp"
+		android:background="@drawable/bg_card">
+
+		<!-- Card Contents go here -->
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_weight="100"
+	    android:paddingBottom="4dp"
+	    android:paddingLeft="6dp"
+	    android:paddingRight="6dp"
+	    android:paddingTop="4dp" 
+	    android:weightSum="100">
+
+	    <TextView
+	        android:id="@+id/number6"
+	        android:layout_width="220dp"
+	        android:layout_height="fill_parent"
+	        android:background="@drawable/gradient"
+	        android:ems="10"
+	        android:padding="5dp"
+	        android:textColor="#000000"
+	        android:textSize="18sp"
+	        android:layout_weight="20"
+	        android:text="Industry Relations:\n\n    8870002629" />
+
+	    <ImageButton
+	        android:id="@+id/call6"
+	        android:layout_width="50dp"
+	        android:layout_height="fill_parent"
+	        android:padding="5dp"
+	        android:layout_weight="80"
+	        android:src="@android:drawable/sym_action_call" />
+
+	</LinearLayout>
+	</LinearLayout>
+	
+								<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="100dip" 
+		android:layout_marginLeft="6dp"
+		android:layout_marginRight="6dp"
+		android:layout_marginTop="4dp"
+		android:layout_marginBottom="4dp"
+		android:background="@drawable/bg_card">
+
+		<!-- Card Contents go here -->
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_weight="100"
+	    android:paddingBottom="4dp"
+	    android:paddingLeft="6dp"
+	    android:paddingRight="6dp"
+	    android:paddingTop="4dp" 
+	    android:weightSum="100">
+
+	    <TextView
+	        android:id="@+id/number7"
+	        android:layout_width="220dp"
+	        android:layout_height="fill_parent"
+	        android:background="#b846b4"
+	        android:ems="10"
+	        android:padding="5dp"
+	        android:textColor="#ffffff"
+	        android:textSize="18sp"
+	        android:layout_weight="20"
+	        android:text="Hospitality:\n\n    8754534996" />
+
+	    <ImageButton
+	        android:id="@+id/call7"
+	        android:layout_width="50dp"
+	        android:layout_height="fill_parent"
+	        android:padding="5dp"
+	        android:layout_weight="80"
+	        android:src="@android:drawable/sym_action_call" />
+
+	</LinearLayout>
+	</LinearLayout>
+
+								<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="100dip" 
+		android:layout_marginLeft="6dp"
+		android:layout_marginRight="6dp"
+		android:layout_marginTop="4dp"
+		android:layout_marginBottom="4dp"
+		android:background="@drawable/bg_card">
+
+		<!-- Card Contents go here -->
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_weight="100"
+	    android:paddingBottom="4dp"
+	    android:paddingLeft="6dp"
+	    android:paddingRight="6dp"
+	    android:paddingTop="4dp" 
+	    android:weightSum="100">
+
+	    <TextView
+	        android:id="@+id/number8"
+	        android:layout_width="220dp"
+	        android:layout_height="fill_parent"
+	        android:background="@drawable/gradient1"
+	        android:ems="10"
+	        android:padding="5dp"
+	        android:textColor="#ffffff"
+	        android:textSize="18sp"
+	        android:layout_weight="20"
+	        android:text="Media:\n\n    9962288712" />
+
+	    <ImageButton
+	        android:id="@+id/call8"
+	        android:layout_width="50dp"
+	        android:layout_height="fill_parent"
+	        android:padding="5dp"
+	        android:layout_weight="80"
+	        android:src="@android:drawable/sym_action_call" />
+
+	</LinearLayout>
+	</LinearLayout>	
+	
+															<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="100dip" 
+		android:layout_marginLeft="6dp"
+		android:layout_marginRight="6dp"
+		android:layout_marginTop="4dp"
+		android:layout_marginBottom="4dp"
+		android:background="@drawable/bg_card">
+
+		<!-- Card Contents go here -->
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_weight="100"
+	    android:paddingBottom="4dp"
+	    android:paddingLeft="6dp"
+	    android:paddingRight="6dp"
+	    android:paddingTop="4dp"
+	    android:weightSum="100" >
+
+	    <TextView
+	        android:id="@+id/number9"
+	        android:layout_width="220dp"
+	        android:layout_height="fill_parent"
+	        android:background="#567875"
+	        android:ems="10"
+	        android:padding="5dp"
+	        android:textColor="#000000"
+	        android:textSize="18sp"
+	        android:layout_weight="20"
+	        android:text="Virtual Participation:\n\n    8883729793" />
+
+	    <ImageButton
+	        android:id="@+id/call9"
+	        android:layout_width="50dp"
+	        android:layout_height="fill_parent"
+	        android:padding="5dp"
+	        android:layout_weight="80"
+	        android:src="@android:drawable/sym_action_call" />
+
+	</LinearLayout>
+	</LinearLayout>	
+	
+		<LinearLayout 
+		android:layout_width="match_parent"
+		android:layout_height="100dip" 
+		android:layout_marginLeft="6dp"
+		android:layout_marginRight="6dp"
+		android:layout_marginTop="4dp"
+		android:layout_marginBottom="4dp"
+		android:background="@drawable/bg_card">
+
+		<!-- Card Contents go here -->
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_weight="100"
+	    android:paddingBottom="4dp"
+	    android:paddingLeft="6dp"
+	    android:paddingRight="6dp"
+	    android:paddingTop="4dp" 
+	    android:weightSum="100">
+
+	    <TextView
+	        android:id="@+id/number10"
+	        android:layout_width="220dp"
+	        android:layout_height="fill_parent"
+	        android:background="#cecec9"
+	        android:ems="10"
+	        android:padding="5dp"
+	        android:textColor="#000000"
+	        android:textSize="18sp"
+	        android:layout_weight="20"
+	        android:text="Web:\n\n    9791793004" />
+
+	    <ImageButton
+	        android:id="@+id/call10"
+	        android:layout_width="50dp"
+	        android:layout_height="fill_parent"
+	        android:padding="5dp"
+	        android:layout_weight="80"
+	        android:src="@android:drawable/sym_action_call" />
+
+	</LinearLayout>
+	</LinearLayout>	
+
+		<LinearLayout 
+		android:layout_width="match_parent"
+		android:layout_height="100dip" 
+		android:layout_marginLeft="6dp"
+		android:layout_marginRight="6dp"
+		android:layout_marginTop="4dp"
+		android:layout_marginBottom="4dp"
+		android:background="@drawable/bg_card">
+
+		<!-- Card Contents go here -->
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_weight="100"
+	    android:paddingBottom="4dp"
+	    android:paddingLeft="6dp"
+	    android:paddingRight="6dp"
+	    android:paddingTop="4dp"
+		android:weightSum="100">
+
+	    <TextView
+	        android:id="@+id/number11"
+	        android:layout_width="220dp"
+	        android:layout_height="fill_parent"
+	        android:background="@drawable/gradient4"
+	        android:ems="10"
+	        android:padding="5dp"
+	        android:textColor="#000000"
+	        android:textSize="18sp"
+	        android:layout_weight="20"
+	        android:text="Karnival:\n\n    8870709449" />
+
+	    <ImageButton
+	        android:id="@+id/call11"
+	        android:layout_width="50dp"
+	        android:layout_height="fill_parent"
+	        android:padding="5dp"
+	        android:layout_weight="80"
+	        android:src="@android:drawable/sym_action_call" />
+
+	</LinearLayout>
+	</LinearLayout>	
+	
+							
+					<LinearLayout 
+		android:layout_width="match_parent"
+		android:layout_height="100dip" 
+		android:layout_marginLeft="6dp"
+		android:layout_marginRight="6dp"
+		android:layout_marginTop="4dp"
+		android:layout_marginBottom="4dp"
+		android:background="@drawable/bg_card">
+
+		<!-- Card Contents go here -->
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_weight="100"
+	    android:paddingBottom="4dp"
+	    android:paddingLeft="6dp"
+	    android:paddingRight="6dp"
+	    android:paddingTop="4dp"
+		android:weightSum="100">
+
+	    <TextView
+	        android:id="@+id/number12"
+	        android:layout_width="220dp"
+	        android:layout_height="fill_parent"
+	        android:background="@drawable/gradient4"
+	        android:ems="10"
+	        android:padding="5dp"
+	        android:textColor="#000000"
+	        android:textSize="18sp"
+	        android:layout_weight="20"
+	        android:text="Student Relations:\n\n    9840671617" />
+
+	    <ImageButton
+	        android:id="@+id/call12"
+	        android:layout_width="50dp"
+	        android:layout_height="fill_parent"
+	        android:padding="5dp"
+	        android:layout_weight="80"
+	        android:src="@android:drawable/sym_action_call" />
+
+	</LinearLayout>
+	</LinearLayout>				
+	</LinearLayout>
+	</FrameLayout>
+	</ScrollView>

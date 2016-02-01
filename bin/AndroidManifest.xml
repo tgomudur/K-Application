@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.org.kurukshetra.app"
+    android:versionCode="6"
+    android:versionName="2.2" 
+    android:configChanges="orientation|keyboardHidden"
+    >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="com.example.kurukshetra14.home.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <permission
+        android:name="com.example.kurukshetra14.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <permission
+        android:name="com.example.kurukshetra14.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.example.mapdemo.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+     The following two permissions are not required to use
+     Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        
+        
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyA3JQLKI7k3x6h5IkW2_B0_G9COT8WwfQg" />
+
+        <receiver
+            android:name="com.pushio.manager.PushIOBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="in.org.kurukshetra.app" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.pushio.manager.PushIOActivityLauncher" />
+
+        <service android:name="com.pushio.manager.PushIOGCMIntentService" />
+        <service android:name="com.pushio.manager.PushIOEngagementService" />
+
+        <activity
+            android:name="com.twotoasters.jazzylistview.sample.SimpleGridActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity android:name="com.twotoasters.jazzylistview.sample.JazzyGrid" />
+      
+        <activity android:name="com.twotoasters.jazzylistview.sample.MainEvents" 
+            android:logo="@drawable/klogo"
+            android:title="@string/notitle"/>
+     
+        <activity android:name="com.twotoasters.jazzylistview.sample.EventCategory1" />
+        <activity android:name="com.twotoasters.jazzylistview.sample.EventCategory2" />
+        <activity android:name="com.twotoasters.jazzylistview.sample.EventCategory3" />
+        <activity android:name="com.twotoasters.jazzylistview.sample.EventCategory4" />
+        <activity android:name="com.twotoasters.jazzylistview.sample.EventCategory5" />
+        <activity android:name="com.twotoasters.jazzylistview.sample.EventCategory6" />
+        <activity android:name="com.twotoasters.jazzylistview.sample.GuestLecture" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.GuestLecEvents" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.Workshops" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.Karnival" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.EventKarnival" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.Worksmainactivity" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.Karnivalmainactivity" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+          <activity android:name="com.twotoasters.jazzylistview.sample.EventKarnivalmainactivity" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.Gallery" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.ContactPage" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.SponsorPage" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        
+        <activity android:name="com.twotoasters.jazzylistview.sample.Sponsor" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.GuestMainActivity"
+            android:logo="@drawable/klogo" 
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.GeneralContact"
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.GeneralContactPlus"
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.SugarRefer" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        
+        
+        <activity android:name="com.twotoasters.jazzylistview.sample.Eventcentremain" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.EventsCorner" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity
+            android:name="com.twotoasters.jazzylistview.sample.SingleEvent"
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"
+            android:theme="@style/Theme.TranslucentActionBar.ActionBar.Overlay" >
+        </activity>
+      
+        <activity android:name="com.twotoasters.jazzylistview.sample.EventsCentre" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.LandingPage"
+            android:logo="@drawable/klogo" 
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.Satellite" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.SingleEventOnly"
+            android:theme="@style/Theme.TranslucentActionBar.ActionBar.Overlay" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        
+        <activity android:name="com.twotoasters.jazzylistview.sample.NavigationView" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.MapNavigation"
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        
+        
+        <activity android:name="com.twotoasters.jazzylistview.sample.MainFragmentE1"
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.MainFragmentE2"
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.MainFragmentE3"
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.MainFragmentE4"
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.MainFragmentE5"
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.MainFragmentE6"
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.MainFragmentE7"
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.MainFragmentE8"
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        
+        <activity android:name="com.twotoasters.jazzylistview.sample.LocateMe"
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.EssayWin"
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"/>
+        
+        <activity android:name="com.twotoasters.jazzylistview.sample.EventSwipeCenter"
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"
+             android:screenOrientation="portrait"/>
+        <activity android:name="com.twotoasters.jazzylistview.sample.SuperSwipeEvent"
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle"
+             android:screenOrientation="portrait"/>
+        
+        
+         <activity android:name="com.twotoasters.jazzylistview.home.NoBoringHomeActivity" 
+             android:logo="@drawable/klogo"
+             android:label="@string/notitle"
+           >
+            
+             
+            <intent-filter>
+              
+               <action android:name="android.intent.action.MAIN"/>
+				
+                <category android:name="android.intent.category.DEFAULT" />
+               
+            </intent-filter>
+            
+             
+        </activity>
+         <activity android:name="com.twotoasters.jazzylistview.about.AboutUs" 
+             android:logo="@drawable/klogo"
+             android:label="@string/notitle">
+           
+             
+        </activity>
+         
+         
+        <activity android:name="com.twotoasters.jazzylistview.about.FinalContact" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+               
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+             
+        </activity>
+        <activity android:name="com.twotoasters.jazzylistview.sponsors.FinalSponsors" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+               
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+             
+        </activity>
+        <activity android:name="com.twotoasters.jazzylistview.update.IndividualUpdate" 
+            android:logo="@drawable/klogo"
+            android:label="@string/notitle">
+            <intent-filter>
+              
+               <action android:name="in.org.kurukshetra.app.NOTIFICATIONPRESSED"/>
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+             
+        </activity>
+        <activity android:name="com.twotoasters.jazzylistview.home.SplashActivity" 
+           android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+           
+            android:label="@string/notitle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+               
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+             
+        </activity>
+		  <activity
+            android:name="com.twotoasters.jazzylistview.about.ActivityZero"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                
+               
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        
+
+        <receiver android:name="com.twotoasters.jazzylistview.sample.MyBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="com.apns.APNService.NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.twotoasters.jazzylistview.sample.AlarmReceiver" android:process=":remote" />
+    </application>
+
+</manifest>

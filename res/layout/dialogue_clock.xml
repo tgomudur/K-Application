@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <FrameLayout
+        android:id="@+id/venueimage"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:background="#d0d0d0" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="2dip"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:orientation="vertical"
+            
+            android:layout_marginTop="6dp"
+         >
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/bg_card"
+            android:gravity="center"
+            android:text="  ALERT ! ! !"
+            android:textColor="#545656"
+            android:textSize="20sp"
+            android:textStyle="bold" >
+</TextView>
+       
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical" >
+
+            
+           
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+				
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="182dp"
+                    android:background="@drawable/bg_card"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/clock1" >
+                </ImageView>
+
+                <Button
+                    android:id="@+id/okie"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginBottom="0dip"
+                    android:background="#645664"
+                    android:padding="8dip"
+                    android:text="OK"
+                    android:textColor="#ffffffff" />
+                
+                <!--android:text="VENUE : Room number 121(1st Floor), Vivek Auditorium"-->
+            </FrameLayout>
+
+            <!-- Card Contents go here -->
+
+        </LinearLayout>
+   
+      
+
+</LinearLayout>
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="190dip"
+    >
+
+<TextView
+    android:id="@+id/toastText"
+    android:layout_width="wrap_content"
+    android:layout_height="50dip"
+    android:layout_margin="15dip"
+    android:background="#AA000000"
+    android:gravity="bottom"
+    android:padding="8dip"
+    android:text="Alarm Notification Will Be Updated Soon ! Stay Tuned ! ! !"
+    android:textColor="#ffffffff" />
+
+</FrameLayout>
+</FrameLayout>
+     </LinearLayout>

@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+          android:layout_height="match_parent">
+<ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    android:background="@drawable/bg22"
+    
+    android:orientation="vertical" >
+
+    
+    <LinearLayout
+        android:id="@+id/mylayoutrefer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       
+        android:background="#d0d0d0"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+         >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Queries and Information"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold|italic" 
+            android:textColor="#2288bb"/>
+  
+        <RelativeLayout
+            android:id="@+id/rlcontact1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip"
+                 android:background="@drawable/bg_card"
+                android:padding="3dip" >
+
+                <ImageView
+                    android:id="@+id/list_image1"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:src="@drawable/contactus" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/thumbnail"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text=" Vignesh karthi"
+                android:textColor="#040404"
+                android:textSize="20dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="1dip"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="8870118202"
+                android:textColor="#343434"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/sym_action_call" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Events"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold|italic" 
+             android:textColor="#2288bb"/>
+
+        <RelativeLayout
+            android:id="@+id/rlcontact2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/bg_card"
+                android:padding="3dip" >
+
+                <ImageView
+                    android:id="@+id/list_image2"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:src="@drawable/contactus" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/thumbnail"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text=" Balan "
+                android:textColor="#040404"
+                android:textSize="20dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="1dip"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="9659382834"
+                android:textColor="#343434"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/sym_action_call" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Workshops"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold|italic"  android:textColor="#2288bb"/>
+
+        <RelativeLayout
+            android:id="@+id/rlcontact3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/bg_card"
+                android:padding="3dip" >
+
+                <ImageView
+                    android:id="@+id/list_image3"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:src="@drawable/contactus" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/thumbnail"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="Rithvik Mundra"
+                android:textColor="#040404"
+                android:textSize="20dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="1dip"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="9176206884"
+                android:textColor="#343434"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/sym_action_call" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Guest Lectures"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold|italic" android:textColor="#2288bb" />
+
+        <RelativeLayout
+            android:id="@+id/rlcontact4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/bg_card"
+                android:padding="3dip" >
+
+                <ImageView
+                    android:id="@+id/list_image4"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:src="@drawable/contactus" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/thumbnail"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="Hemalatha Murugesan:"
+                android:textColor="#040404"
+                android:textSize="20dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="1dip"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="9842521198"
+                android:textColor="#343434"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/sym_action_call" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Xceed"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold|italic"  android:textColor="#2288bb"/>
+
+        <RelativeLayout
+            android:id="@+id/rlcontact5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/bg_card"
+                android:padding="3dip" >
+
+                <ImageView
+                    android:id="@+id/list_image5"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:src="@drawable/contactus" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/thumbnail"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="Sagar "
+                android:textColor="#040404"
+                android:textSize="20dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="1dip"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="9566607666"
+                android:textColor="#343434"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/sym_action_call" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Industry Relations"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold|italic"  android:textColor="#2288bb"/>
+
+        <RelativeLayout
+            android:id="@+id/rlcontact6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/bg_card"
+                android:padding="3dip" >
+
+                <ImageView
+                    android:id="@+id/list_image6"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:src="@drawable/contactus" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/thumbnail"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="Tharana maran"
+                android:textColor="#040404"
+                android:textSize="20dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="1dip"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="8870002629"
+                android:textColor="#343434"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/sym_action_call" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Hospitality"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold|italic" android:textColor="#2288bb" />
+
+        <RelativeLayout
+            android:id="@+id/rlcontact7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/bg_card"
+                android:padding="3dip" >
+
+                <ImageView
+                    android:id="@+id/list_image7"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:src="@drawable/contactus" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/thumbnail"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text=" Rohini Jinmayam"
+                android:textColor="#040404"
+                android:textSize="20dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="1dip"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="8754534996"
+                android:textColor="#343434"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/sym_action_call" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Media"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold|italic" android:textColor="#2288bb" />
+
+        <RelativeLayout
+            android:id="@+id/rlcontact8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/bg_card"
+                android:padding="3dip" >
+
+                <ImageView
+                    android:id="@+id/list_image8"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:src="@drawable/contactus" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/thumbnail"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="Soumya"
+                android:textColor="#040404"
+                android:textSize="20dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="1dip"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="9962288712"
+                android:textColor="#343434"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/sym_action_call" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Virtual Participation"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold|italic"  android:textColor="#2288bb"/>
+
+        <RelativeLayout
+            android:id="@+id/rlcontact9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/bg_card"
+                android:padding="3dip" >
+
+                <ImageView
+                    android:id="@+id/list_image9"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:src="@drawable/contactus" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/thumbnail"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="Krishnan "
+                android:textColor="#040404"
+                android:textSize="20dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="1dip"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="8883729793"
+                android:textColor="#343434"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/sym_action_call" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Web"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold|italic"  android:textColor="#2288bb"/>
+
+        <RelativeLayout
+            android:id="@+id/rlcontact10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/bg_card"
+                android:padding="3dip" >
+
+                <ImageView
+                    android:id="@+id/list_image10"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:src="@drawable/contactus" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/thumbnail"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="Chandresh"
+                android:textColor="#040404"
+                android:textSize="20dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="1dip"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="9791793004"
+                android:textColor="#343434"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/sym_action_call" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Karnival"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold|italic"  android:textColor="#2288bb"/>
+
+        <RelativeLayout
+            android:id="@+id/rlcontact11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/bg_card"
+                android:padding="3dip" >
+
+                <ImageView
+                    android:id="@+id/list_image11"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:src="@drawable/contactus" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/thumbnail"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="Ashwin karthik"
+                android:textColor="#040404"
+                android:textSize="20dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="1dip"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="8870709449"
+                android:textColor="#343434"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/sym_action_call" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Student Relations"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold|italic"  android:textColor="#2288bb"/>
+
+        <RelativeLayout
+            android:id="@+id/rlcontact12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/bg_card"
+                android:padding="3dip" >
+
+                <ImageView
+                    android:id="@+id/list_image12"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:src="@drawable/contactus" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/thumbnail"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="Sridevi"
+                android:textColor="#040404"
+                android:textSize="20dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="1dip"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="9840671617"
+                android:textColor="#343434"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/sym_action_call" />
+            
+        </RelativeLayout>
+       
+        
+          
+       
+     
+    </LinearLayout>
+
+    
+ 
+</ScrollView>
+ <com.capricorn.RayMenu
+            android:id="@+id/ray_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_gravity="bottom|left"/>
+</FrameLayout>

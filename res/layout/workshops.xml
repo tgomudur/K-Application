@@ -1,0 +1,45 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res/in.org.kurukshetra.app"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/background"
+             tools:context=".MainActivity" >
+
+    <com.twotoasters.jazzylistview.JazzyGridView
+        android:id="@id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:numColumns="1"
+        android:horizontalSpacing="18dp"
+        android:verticalSpacing="18dp"
+        app:effect="cards"
+        app:only_animate_new_items="false"
+  
+         />
+	<LinearLayout
+         android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+     <!--   <android.view.ext.SatelliteMenu
+        android:id="@+id/menu"
+       
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left" 
+        android:layout_margin="8dp"-->
+        <com.capricorn.RayMenu
+            android:id="@+id/ray_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_gravity="bottom|left"/>
+        
+        
+       
+     
+    
+  </LinearLayout>
+    
+</FrameLayout>

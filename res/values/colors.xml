@@ -1,0 +1,22 @@
+<resources>
+
+    <color name="md__transparent">#00000000</color>
+    <color name="md__defaultBackground">#FF555555</color>
+    
+    <color name="background">#323232</color>
+    <color name="even">#FFFFFF</color>
+    <color name="odd">#eeeeee</color> 
+     <color name="background_window">#FFE5E5E5</color>
+    <color name="menudrawerbg">#4F4F4F</color>
+    <color name="md__transparent">#00000000</color>
+    <color name="md__defaultBackground">#FF555555</color>
+    <color name="background">#323232</color>
+    <color name="even">#FFFFFF</color>
+    <color name="odd">#eeeeee</color>
+    <color name="background_window">#FFE5E5E5</color>
+    <color name="main">#63C3FF</color>
+  <!--  <color name="actionbar_title_color">@android:color/white</color> --> 
+   <color name="actionbar_title_color">@android:color/white</color>
+
+    
+</resources>

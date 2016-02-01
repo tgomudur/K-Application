@@ -1,0 +1,1535 @@
+package com.example.countryconquest.secondworld;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+
+
+
+
+
+import java.util.Map;
+import java.util.Random;
+
+import com.example.countryconquest.R;
+import com.example.countryconquest.firstworld.SimpleGestureFilter;
+import com.example.countryconquest.firstworld.StartGame;
+import com.romainpiel.titanic.library.Titanic;
+import com.romainpiel.titanic.library.TitanicTextView;
+import com.twotoasters.jazzylistview.JazzyGridView;
+import com.twotoasters.jazzylistview.JazzyHelper;
+
+import android.animation.Animator;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
+import android.animation.Animator.AnimatorListener;
+import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.Animation.AnimationListener;
+import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.ListAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
+import android.os.Build;
+
+
+public class SecondGame extends Activity implements com.example.countryconquest.firstworld.SimpleGestureFilter.SimpleGestureListener,
+		AnimationListener {
+
+	int ImageId[] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+			7 };
+	
+	int bgim[] = { R.drawable.colora, R.drawable.colorb, R.drawable.colorc,
+			R.drawable.colore, R.drawable.colorf, R.drawable.colorg,
+			R.drawable.colorhh, R.drawable.colori, R.drawable.colorj,
+			R.drawable.colork, R.drawable.colork };
+	public static int[] bgimg=new int[20];
+	public static char[] bgimgplace=new char[4];
+	public static int cnt=0;
+	public static int country_pos=1;
+	
+	
+	AnimatorSet set;
+	ObjectAnimator animation1;
+
+	char Image[] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
+			'L', 'O', 'P' };
+	// int
+	// Images[]={R.drawable.b1,R.drawable.b2,R.drawable.b5,R.drawable.b6,R.drawable.b9,R.drawable.b8,R.drawable.b7};
+
+	List<Integer> freePlaces = new ArrayList<Integer>();
+	List<Integer> occupiedPlaces = new ArrayList<Integer>();
+	List<Integer> randomCount = new ArrayList<Integer>();
+
+	@SuppressWarnings("rawtypes")
+	Map randCout = new HashMap();
+
+	TitanicTextView Grid1,Grid2, Grid3, Grid4, Grid5, Grid6, Grid7, Grid8, Grid9,
+			Grid10, Grid11, Grid12, Grid13, Grid14, Grid15, Grid16, GridRefer;
+	TextView myScore, myHighScore;
+	TextView floatScore;
+
+	ImageView flyingimg;
+
+	int int_rand1 = 0, int_rand2 = 0;
+	int int_rand, int_img_rand;
+	int int_img_rand1 = 0, int_img_rand2 = 0;
+	int swipeId = 0;
+	int score = 0;
+	int highScore = 0;
+	int firstTime = 0;
+
+	int tapId = 0;
+	int randShift = 0;
+	int jokkerFlag = 0;
+	int jokkerCount = 0;
+	int jokkerPlace = 0;
+
+	boolean canrun = false;
+
+	boolean liveflag = true;
+
+	int randJokkerPack[] = { 10, 11, 13, 14, 15, 16, 17, 18 };
+	int randJokkkerCount = 0;
+
+	private SimpleGestureFilter detector;
+	private Animation zoomIn, blink, slideup, slideup1;
+
+	SharedPreferences HighScore;
+	SharedPreferences.Editor HighScoreEditor;
+	
+	SharedPreferences SecondWorldWin;
+	SharedPreferences.Editor SecondWorldWinEditor;
+
+	Random rand, rand1, rand2, newrand;
+
+	public int getImage(int imageid) {
+		int id = 0;
+		switch (imageid) {
+		case 1:
+			id = 0;
+			break;
+		case 2:
+			id = 1;
+			break;
+		case 4:
+			id = 2;
+			break;
+		case 8:
+			id = 3;
+			break;
+		case 16:
+			id = 4;
+			break;
+		case 32:
+			id = 5;
+			break;
+		case 64:
+			id = 6;
+			break;
+		case 128:
+			id = 7;
+			break;
+		case 256:
+			id = 8;
+			break;
+		case 512:
+			id = 9;
+			break;
+		case 1024:
+			id = 10;
+			break;
+		case 2048:
+			id = 11;
+			break;
+
+		default:
+			id = 20;
+			;
+		}
+		return id;
+	}
+
+	public void updateScore(int value) {
+		score += value;
+		myScore.setText("" + score);
+		if (firstTime == 0) {
+			myHighScore.setText("" + score);
+		}
+
+		String st = String.valueOf(value) + "+";
+
+		floatScore.setText("" + st);
+		//floatScore.startAnimation(slideup);
+		floatScore.setVisibility(View.VISIBLE);
+		set.start();
+
+	}
+
+	public void BoosterAnimate(int position) {
+
+		switch (position) {
+		case 0:
+			GridRefer = Grid1;
+			break;
+		case 1:
+			GridRefer = Grid2;
+			break;
+		case 2:
+			GridRefer = Grid3;
+			break;
+		case 3:
+			GridRefer = Grid4;
+			break;
+		case 4:
+			GridRefer = Grid5;
+			break;
+		case 5:
+			GridRefer = Grid6;
+			break;
+		case 6:
+			GridRefer = Grid7;
+			break;
+		case 7:
+			GridRefer = Grid8;
+			break;
+		case 8:
+			GridRefer = Grid9;
+			break;
+		case 9:
+			GridRefer = Grid10;
+			break;
+		case 10:
+			GridRefer = Grid11;
+			break;
+		case 11:
+			GridRefer = Grid12;
+			break;
+		case 12:
+			GridRefer = Grid13;
+			break;
+		case 13:
+			GridRefer = Grid14;
+			break;
+		case 14:
+			GridRefer = Grid15;
+			break;
+		case 15:
+			GridRefer = Grid16;
+			break;
+		default:
+			;
+
+		}
+		canrun = true;
+	}
+
+	public void AnimateWind(int pos) {
+		// flyingimg.setBackgroundResource(R.drawable.cat1);
+		// flyingimg.startAnimation(slideup);
+
+		switch (pos) {
+		case 0:
+			Grid1.startAnimation(blink);
+			Grid1.setText("");
+			Grid1.setBackgroundResource(R.drawable.edge);
+			break;
+		case 1:
+			Grid2.startAnimation(blink);
+			Grid2.setText("");
+			Grid2.setBackgroundResource(R.drawable.edge);
+			break;
+		case 2:
+			Grid3.startAnimation(blink);
+			Grid3.setText("");
+			Grid3.setBackgroundResource(R.drawable.edge);
+			break;
+		case 3:
+			Grid4.startAnimation(blink);
+			Grid4.setText("");
+			Grid4.setBackgroundResource(R.drawable.edge);
+			break;
+		case 4:
+			Grid5.startAnimation(blink);
+			Grid5.setText("");
+			Grid5.setBackgroundResource(R.drawable.edge);
+			break;
+		case 5:
+			Grid6.startAnimation(blink);
+			Grid6.setText("");
+			Grid6.setBackgroundResource(R.drawable.edge);
+			break;
+		case 6:
+			Grid7.startAnimation(blink);
+			Grid7.setText("");
+			Grid7.setBackgroundResource(R.drawable.edge);
+			break;
+		case 7:
+			Grid8.startAnimation(blink);
+			Grid8.setText("");
+			Grid8.setBackgroundResource(R.drawable.edge);
+			break;
+		case 8:
+			Grid9.startAnimation(blink);
+			Grid9.setText("");
+			Grid9.setBackgroundResource(R.drawable.edge);
+			break;
+		case 9:
+			Grid10.startAnimation(blink);
+			Grid10.setText("");
+			Grid10.setBackgroundResource(R.drawable.edge);
+			break;
+		case 10:
+			Grid11.startAnimation(blink);
+			Grid11.setText("");
+			Grid11.setBackgroundResource(R.drawable.edge);
+			break;
+		case 11:
+			Grid12.startAnimation(blink);
+			Grid12.setText("");
+			Grid12.setBackgroundResource(R.drawable.edge);
+			break;
+		case 12:
+			Grid13.startAnimation(blink);
+			Grid13.setText("");
+			Grid13.setBackgroundResource(R.drawable.edge);
+			break;
+		case 13:
+			Grid14.startAnimation(blink);
+			Grid14.setText("");
+			Grid14.setBackgroundResource(R.drawable.edge);
+			break;
+		case 14:
+			Grid15.startAnimation(blink);
+			Grid15.setText("");
+			Grid15.setBackgroundResource(R.drawable.edge);
+			break;
+		case 15:
+			Grid16.startAnimation(blink);
+			Grid16.setText("");
+			Grid16.setBackgroundResource(R.drawable.edge);
+			break;
+		default:
+			;
+		}
+
+	}
+
+	public int CheckCollision(int direction) {
+		int i, j, k, flag = 0;
+		switch (direction) {
+		case 1:
+			for (i = 0; i <= 12; i += 4) {
+				k = i + 3;
+				for (j = i; j < k; j++) {
+					if ((ImageId[j] == ImageId[j + 1]) && (ImageId[j] != 7)) {
+						AnimateWind(j);
+						// AnimateWind(j+1);
+						// ImageId[j]=7;
+						// ImageId[j+1]=7;
+
+						ImageId[j] += ImageId[j + 1];
+						ImageId[j + 1] = 7;
+
+						occupiedPlaces.remove(occupiedPlaces.indexOf(j + 1));
+
+						freePlaces.add(j + 1);
+
+						updateScore(getImage(ImageId[j]));
+
+						flag = 1;
+
+						j++;
+					}
+				}
+			}
+
+			break;
+		case 2:
+			for (i = 0; i <= 12; i += 4) {
+				k = i + 3;
+				for (j = i; j < k; j++) {
+					if ((ImageId[j] == ImageId[j + 1]) && (ImageId[j] != 7)) {
+						AnimateWind(j + 1);
+						// (j+1);
+						ImageId[j + 1] += ImageId[j + 1];
+						ImageId[j] = 7;
+						occupiedPlaces.remove(occupiedPlaces.indexOf(j));
+						freePlaces.add(j);
+
+						updateScore(getImage(ImageId[j + 1]));
+						j++;
+						flag = 1;
+					}
+				}
+			}
+
+			break;
+		case 3:
+			for (i = 0; i <= 3; i++) {
+				k = i + 12;
+				for (j = i; j < k; j += 4) {
+					if ((ImageId[j] == ImageId[j + 4]) && (ImageId[j] != 7)) {
+						AnimateWind(j);
+						// / AnimateWind(j+4);
+						ImageId[j] += ImageId[j + 4];
+						ImageId[j + 4] = 7;
+						occupiedPlaces.remove(occupiedPlaces.indexOf(j + 4));
+						freePlaces.add(j + 4);
+
+						updateScore(getImage(ImageId[j]));
+						j++;
+						flag = 1;
+					}
+				}
+			}
+
+			break;
+		case 4:
+			for (i = 0; i <= 3; i++) {
+				k = i + 12;
+				for (j = i; j < k; j += 4) {
+					if ((ImageId[j] == ImageId[j + 4]) && (ImageId[j] != 7)) {
+						AnimateWind(j + 4);
+						// AnimateWind(j+4);
+						ImageId[j + 4] += ImageId[j];
+						ImageId[j] = 7;
+						occupiedPlaces.remove(occupiedPlaces.indexOf(j));
+						freePlaces.add(j);
+
+						updateScore(getImage(ImageId[j + 4]));
+						j++;
+						flag = 1;
+					}
+				}
+			}
+
+			break;
+		default:
+			;
+		}
+		return flag;
+	}
+
+	public int MoveGrid(int direction) {
+		int i, j, sub = 0, k = 0, cnt = 0;
+		int moved = 0;
+		switch (direction) {
+
+		case 1:
+
+			cnt = 0;
+			int sub_end1[] = { 3, 7, 11, 15 };
+			for (i = 0; i < 3; i++) {
+				sub = i + 12;
+				for (j = i; j <= sub; j += 4) {
+
+					if (ImageId[j] == 7) {
+						for (k = j + 1; k <= sub_end1[cnt]; k++) {
+
+							if (ImageId[k] != 7) {
+								ImageId[j] = ImageId[k];
+								ImageId[k] = 7;
+								freePlaces.add(k);
+								freePlaces.remove(freePlaces.indexOf(j));
+								occupiedPlaces
+										.remove(occupiedPlaces.indexOf(k));
+								occupiedPlaces.add(j);
+								moved = 1;
+
+								break;
+							}
+
+						}
+					}
+					cnt++;
+				}
+				cnt = 0;
+			}
+			break;
+
+		case 2:
+
+			cnt = 0;
+			int sub_end2[] = { 0, 4, 8, 12 };
+			for (i = 3; i > 0; i--) {
+				sub = i + 12;
+				for (j = i; j <= sub; j += 4) {
+
+					if (ImageId[j] == 7) {
+						for (k = j - 1; k >= sub_end2[cnt]; k--) {
+							if (ImageId[k] != 7) {
+								ImageId[j] = ImageId[k];
+								ImageId[k] = 7;
+								freePlaces.add(k);
+								freePlaces.remove(freePlaces.indexOf(j));
+								occupiedPlaces
+										.remove(occupiedPlaces.indexOf(k));
+								occupiedPlaces.add(j);
+								moved = 1;
+
+								break;
+							}
+						}
+					}
+					cnt++;
+				}
+				cnt = 0;
+			}
+
+			break;
+		case 3:
+			// Toast.makeText(getApplicationContext(), "3",
+			// Toast.LENGTH_LONG).show();
+			cnt = 0;
+			int sub_end3[] = { 12, 13, 14, 15 };
+			for (i = 0; i < 12; i += 4) {
+				sub = i + 3;
+				for (j = i; j <= sub; j++) {
+
+					if (ImageId[j] == 7) {
+						for (k = j + 4; k <= sub_end3[cnt]; k += 4) {
+							if (ImageId[k] != 7) {
+								ImageId[j] = ImageId[k];
+								ImageId[k] = 7;
+								freePlaces.add(k);
+								freePlaces.remove(freePlaces.indexOf(j));
+								occupiedPlaces
+										.remove(occupiedPlaces.indexOf(k));
+								occupiedPlaces.add(j);
+								moved = 1;
+
+								break;
+							}
+						}
+					}
+					cnt++;
+				}
+				cnt = 0;
+			}
+
+			break;
+		case 4:
+			// Toast.makeText(getApplicationContext(), "4",
+			// Toast.LENGTH_LONG).show();
+			cnt = 0;
+			int sub_end4[] = { 0, 1, 2, 3 };
+			for (i = 12; i > 0; i -= 4) {
+				sub = i + 3;
+				for (j = i; j <= sub; j++) {
+
+					if (ImageId[j] == 7) {
+						for (k = j - 4; k >= sub_end4[cnt]; k -= 4) {
+							if (ImageId[k] != 7) {
+								ImageId[j] = ImageId[k];
+								ImageId[k] = 7;
+								freePlaces.add(k);
+								freePlaces.remove(freePlaces.indexOf(j));
+								occupiedPlaces
+										.remove(occupiedPlaces.indexOf(k));
+								occupiedPlaces.add(j);
+								moved = 1;
+
+								break;
+							}
+						}
+					}
+					cnt++;
+				}
+				cnt = 0;
+			}
+			break;
+		default:
+			;
+
+		}
+		ShowGrid(swipeId);
+		return moved;
+	}
+
+	public int isPossibleMove() {
+		int i, c = 0;
+		for (i = 0; i < 4; i++) {
+			if (ImageId[i] == ImageId[i + 4]) {
+				c++;
+				break;
+			} else if (ImageId[i + 4] == ImageId[i + 8]) {
+				c++;
+				break;
+			} else if (ImageId[i + 8] == ImageId[i + 12]) {
+				c++;
+				break;
+			}
+		}
+		for (i = 0; i <= 12; i += 4) {
+			if (ImageId[i] == ImageId[i + 1]) {
+				c++;
+				break;
+			} else if (ImageId[i + 1] == ImageId[i + 2]) {
+				c++;
+				break;
+			} else if (ImageId[i + 2] == ImageId[i + 3]) {
+				c++;
+				break;
+			}
+
+		}
+		return c;
+	}
+
+	public void AnimateWin(int pos)
+	{
+		switch(pos)
+		{
+		case 0:
+			Grid1.startAnimation(blink);
+			break;
+		case 1:
+			Grid2.startAnimation(blink);
+			break;
+		case 2:
+			Grid3.startAnimation(blink);
+			break;
+		case 3:
+			Grid4.startAnimation(blink);
+			break;
+		case 4:
+			Grid5.startAnimation(blink);
+			break;
+		case 5:
+			Grid6.startAnimation(blink);
+			break;
+		case 6:
+			Grid7.startAnimation(blink);
+			break;
+		case 7:
+			Grid8.startAnimation(blink);
+			break;
+		case 8:
+			Grid9.startAnimation(blink);
+			break;
+		case 9:
+			Grid10.startAnimation(blink);
+			break;
+		case 10:
+			Grid11.startAnimation(blink);
+			break;
+		case 11:
+			Grid12.startAnimation(blink);
+			break;
+		case 12:
+			Grid13.startAnimation(blink);
+			break;
+		case 13:
+			Grid14.startAnimation(blink);
+			break;
+		case 14:
+			Grid15.startAnimation(blink);
+			break;
+		case 15:
+			Grid16.startAnimation(blink);
+			break;
+		default:
+			;
+		}
+	}
+	
+	public void setPreference(int con_pos)
+	{
+		SharedPreferences SecondStageCountries;
+		SharedPreferences.Editor SSCEditor;
+		SecondStageCountries= getSharedPreferences("SSCList", MODE_PRIVATE);
+		SSCEditor=SecondStageCountries.edit();
+		String s="SSCLevel"+con_pos;
+		SSCEditor.putInt(s, 1);
+		SSCEditor.commit();
+	}
+	
+	public int winCheckFinal()
+	{
+		int i,j,k,isWin=0;
+		
+		for(i=0;i<4;i++)
+		{
+			k=i+8;
+		for(j=i;j<k;j+=4)
+		{
+		if(getImage(ImageId[j])==0 && getImage(ImageId[j+4])==1 && getImage(ImageId[j+8])==2)
+		{
+		isWin=1;
+		Toast.makeText(getApplicationContext(), "Check : Four "+j+" "+j+4+" "+j+8+"\n  "+ImageId[j]+" "+ImageId[j+4]+" "+ImageId[j+8], Toast.LENGTH_LONG).show();
+		AnimateWin(j);
+		AnimateWin(j+4);
+		AnimateWin(j+8);
+		break;
+		}
+		}
+		}
+		
+		for(i=0;i<16;i+=4)
+		{
+			k=i+2;
+		for(j=i;j<k;j++)
+		{
+		if(getImage(ImageId[j])==0 && getImage(ImageId[j+1])==1 && getImage(ImageId[j+2])==2)
+		{
+		isWin=1;
+		AnimateWin(j);
+		AnimateWin(j+1);
+		AnimateWin(j+2);
+		Toast.makeText(getApplicationContext(), "Check : One "+j+" "+j+1+" "+j+2+"\n  "+ImageId[j]+" "+ImageId[j+1]+" "+ImageId[j+2], Toast.LENGTH_LONG).show();
+		break;
+		}
+		}
+		}
+		
+	
+	return isWin;
+	}
+	
+	public int win()
+	{
+		int i=0,j=0,flag[]=new int[3],isWin=0;
+		for(i=0;i<16;i++)
+		{
+		if(getImage(ImageId[i])==0)
+		{
+		flag[0]=1;
+		}
+		if(getImage(ImageId[i])==1)
+		{
+		flag[1]=1;
+		}
+		if(getImage(ImageId[i])==2)
+		{
+		flag[2]=1;
+		}
+		}
+		
+		if(flag[0]==1 && flag[1]==1 && flag[2]==1)
+		{
+		
+			if(winCheckFinal()==1)
+			{
+				isWin=1;
+				
+				
+			}
+			
+		}
+		
+		return isWin;
+	}
+	
+	public int checkWin() {
+		
+		/*if (occupiedPlaces.size() == 0 || occupiedPlaces.size() == 1) {
+			Toast.makeText(getApplicationContext(), "Congrat You Won!!!",
+					Toast.LENGTH_LONG).show();
+			if (score > highScore) {
+				HighScoreEditor.putInt("highscore", score);
+				HighScoreEditor.commit();
+				Toast.makeText(getApplicationContext(),
+						"New Score Acheivement", Toast.LENGTH_LONG).show();
+				liveflag = false;
+				return 1;
+			}
+		}*/
+		if(win()==1)
+		{
+		Toast.makeText(getApplicationContext(), "Congrats You Have Conquered This Country", Toast.LENGTH_LONG).show();
+		setPreference(country_pos);
+		Toast.makeText(getApplicationContext(), "Country Position : "+country_pos, Toast.LENGTH_LONG).show();
+		}
+		 else if (occupiedPlaces.size() == 16 && jokkerFlag == 0) {
+			int fl = isPossibleMove();
+			if (fl == 0) {
+				Toast.makeText(getApplicationContext(), "Match Finished!!!",
+						Toast.LENGTH_LONG).show();
+
+				if (score > highScore) {
+					HighScoreEditor.putInt("highscore", score);
+					HighScoreEditor.commit();
+					Toast.makeText(getApplicationContext(),
+							"New Score Acheivement", Toast.LENGTH_LONG).show();
+					liveflag = false;
+					return 1;
+
+				}
+			}
+		}
+		return 0;
+	}
+
+	public void removetext()
+	{
+	int i=0,canremove=0;
+	for(i=0;i<16;i++)
+	{
+	canremove=getImage(ImageId[i]);
+	
+	//Must Check
+	
+	if(canremove!=2 && canremove!=7 && canremove!=11)
+	{
+	switch(i)
+	{
+	case 0:
+		Grid1.setText("");
+		new Titanic().stop(Grid1);
+		break;
+	case 1:
+		Grid2.setText("");
+		new Titanic().stop(Grid2);
+		break;
+	case 2:
+		Grid3.setText("");
+		new Titanic().stop(Grid3);
+		break;
+	case 3:
+		Grid4.setText("");
+		new Titanic().stop(Grid4);
+		break;
+	case 4:
+		Grid5.setText("");
+		new Titanic().stop(Grid5);
+		break;
+	case 5:
+		Grid6.setText("");
+		new Titanic().stop(Grid6);
+		break;
+	case 6:
+		Grid7.setText("");
+		new Titanic().stop(Grid7);
+		break;
+	case 7:
+		Grid8.setText("");
+		new Titanic().stop(Grid8);
+		break;
+	case 8:
+		Grid9.setText("");
+		new Titanic().stop(Grid9);
+		break;
+	case 9:
+		Grid10.setText("");
+		new Titanic().stop(Grid10);
+		break;
+	case 10:
+		Grid11.setText("");
+		new Titanic().stop(Grid11);
+		break;
+	case 11:
+		Grid12.setText("");
+		new Titanic().stop(Grid12);
+		break;
+	case 12:
+		Grid13.setText("");
+		new Titanic().stop(Grid13);
+		break;
+	case 13:
+		Grid14.setText("");
+		new Titanic().stop(Grid14);
+		break;
+	case 14:
+		Grid15.setText("");
+		new Titanic().stop(Grid15);
+		break;
+	case 15:
+		Grid16.setText("");
+		new Titanic().stop(Grid16);
+		break;
+	default:
+		;
+		
+	}
+	}
+	}
+	}
+	public void show(int position) {
+		
+		removetext();
+		
+		
+		try {
+			int canDisText=getImage(ImageId[position]);
+			int tflag=0;
+			int tcnt=0;
+			//Toast.makeText(getApplicationContext(), ""+canDisText, Toast.LENGTH_SHORT).show();
+			switch(canDisText)
+			{
+			case 2:
+				tflag=1;
+				tcnt=0;
+				break;
+			case 7:
+				tflag=1;
+				tcnt=1;
+				break;
+			case 11:
+				tflag=1;
+				tcnt=2;
+				break;
+			default:
+				tflag=0;
+				tcnt=0;
+			
+			}
+			switch (position) {
+			case 0:
+			
+				if(tflag==1){Grid1.setText("" + bgimgplace[tcnt]);}
+				Grid1.startAnimation(zoomIn);
+				Grid1.setBackgroundResource(bgimg[getImage(ImageId[position])]);
+				new Titanic().start(Grid1);
+			
+			
+
+				break;
+			case 1:
+				if(tflag==1){Grid2.setText("" + bgimgplace[tcnt]);}
+				Grid2.startAnimation(zoomIn);
+				Grid2.setBackgroundResource(bgimg[getImage(ImageId[position])]);
+				new Titanic().start(Grid2);
+				break;
+			case 2:
+				if(tflag==1){Grid3.setText("" + bgimgplace[tcnt]);}
+				Grid3.startAnimation(zoomIn);
+				Grid3.setBackgroundResource(bgimg[getImage(ImageId[position])]);
+				new Titanic().start(Grid3);
+				break;
+			case 3:
+				if(tflag==1){Grid4.setText("" + bgimgplace[tcnt]);}
+				Grid4.startAnimation(zoomIn);
+				Grid4.setBackgroundResource(bgimg[getImage(ImageId[position])]);
+				new Titanic().start(Grid4);
+				break;
+			case 4:
+				if(tflag==1){Grid5.setText("" + bgimgplace[tcnt]);}
+				Grid5.startAnimation(zoomIn);
+				Grid5.setBackgroundResource(bgimg[getImage(ImageId[position])]);
+				new Titanic().start(Grid5);
+				break;
+			case 5:
+				if(tflag==1){Grid6.setText("" + bgimgplace[tcnt]);}
+				Grid6.startAnimation(zoomIn);
+				Grid6.setBackgroundResource(bgimg[getImage(ImageId[position])]);
+				new Titanic().start(Grid6);
+				break;
+			case 6:
+				if(tflag==1){Grid7.setText("" + bgimgplace[tcnt]);}
+				Grid7.startAnimation(zoomIn);
+				Grid7.setBackgroundResource(bgimg[getImage(ImageId[position])]);
+				new Titanic().start(Grid7);
+				break;
+			case 7:
+				if(tflag==1){Grid8.setText("" + bgimgplace[tcnt]);}
+				Grid8.startAnimation(zoomIn);
+				Grid8.setBackgroundResource(bgimg[getImage(ImageId[position])]);
+				new Titanic().start(Grid8);
+				break;
+			case 8:
+				if(tflag==1){Grid9.setText("" + bgimgplace[tcnt]);}
+				Grid9.startAnimation(zoomIn);
+				Grid9.setBackgroundResource(bgimg[getImage(ImageId[position])]);
+				new Titanic().start(Grid9);
+				break;
+			case 9:
+				if(tflag==1){Grid10.setText("" + bgimgplace[tcnt]);}
+				Grid10.startAnimation(zoomIn);
+				Grid10.setBackgroundResource(bgimg[getImage(ImageId[position])]);
+				new Titanic().start(Grid10);
+				break;
+			case 10:
+				if(tflag==1){Grid11.setText("" + bgimgplace[tcnt]);}
+				Grid11.startAnimation(zoomIn);
+				Grid11.setBackgroundResource(bgimg[getImage(ImageId[position])]);
+				new Titanic().start(Grid11);
+				break;
+			case 11:
+				if(tflag==1){Grid12.setText("" + bgimgplace[tcnt]);}
+				Grid12.startAnimation(zoomIn);
+				Grid12.setBackgroundResource(bgimg[getImage(ImageId[position])]);
+				new Titanic().start(Grid12);
+				break;
+			case 12:
+				if(tflag==1){Grid13.setText("" + bgimgplace[tcnt]);}
+				Grid13.startAnimation(zoomIn);
+				Grid13.setBackgroundResource(bgimg[getImage(ImageId[position])]);
+				new Titanic().start(Grid13);
+				break;
+			case 13:
+				if(tflag==1){Grid14.setText("" + bgimgplace[tcnt]);}
+				Grid14.startAnimation(zoomIn);
+				Grid14.setBackgroundResource(bgimg[getImage(ImageId[position])]);
+				new Titanic().start(Grid14);
+				break;
+			case 14:
+				if(tflag==1){Grid15.setText("" + bgimgplace[tcnt]);}
+				Grid15.startAnimation(zoomIn);
+				Grid15.setBackgroundResource(bgimg[getImage(ImageId[position])]);
+				new Titanic().start(Grid15);
+				
+				break;
+			case 15:
+				if(tflag==1){Grid16.setText("" + bgimgplace[tcnt]);}
+				Grid16.startAnimation(zoomIn);
+				Grid16.setBackgroundResource(bgimg[getImage(ImageId[position])]);
+				new Titanic().start(Grid16);
+				break;
+			default:
+				;
+
+			}
+		} catch (Exception e) {
+			//Toast.makeText(getApplicationContext(), "Msg : " + e.toString(),
+				//ToAST	Toast.LENGTH_SHORT).show();
+		}
+		// Toast.makeText(getApplicationContext(),
+		// ""+Image[getImage(ImageId[position])], Toast.LENGTH_SHORT).show();
+	}
+
+	public void Animate(int position) {
+		switch (position) {
+		case 0:
+			// Grid1.startAnimation(blink);
+			Grid1.setText("");
+			Grid1.setBackgroundResource(R.drawable.edge);
+			break;
+		case 1:
+			// Grid2.startAnimation(blink);
+			Grid2.setText("");
+			Grid2.setBackgroundResource(R.drawable.edge);
+			break;
+		case 2:
+			// Grid3.startAnimation(blink);
+			Grid3.setText("");
+			Grid3.setBackgroundResource(R.drawable.edge);
+			break;
+		case 3:
+			// Grid4.startAnimation(blink);
+			Grid4.setText("");
+			Grid4.setBackgroundResource(R.drawable.edge);
+			break;
+		case 4:
+			// Grid5.startAnimation(blink);
+			Grid5.setText("");
+			Grid5.setBackgroundResource(R.drawable.edge);
+			break;
+		case 5:
+			// Grid6.startAnimation(blink);
+			Grid6.setText("");
+			Grid6.setBackgroundResource(R.drawable.edge);
+			break;
+		case 6:
+			// Grid7.startAnimation(blink);
+			Grid7.setText("");
+			Grid7.setBackgroundResource(R.drawable.edge);
+			break;
+		case 7:
+			// Grid8.startAnimation(blink);
+			Grid8.setText("");
+			Grid8.setBackgroundResource(R.drawable.edge);
+			break;
+		case 8:
+			// Grid9.startAnimation(blink);
+			Grid9.setText("");
+			Grid9.setBackgroundResource(R.drawable.edge);
+			break;
+		case 9:
+			// Grid10.startAnimation(blink);
+			Grid10.setText("");
+			Grid10.setBackgroundResource(R.drawable.edge);
+			break;
+		case 10:
+			// Grid11.startAnimation(blink);
+			Grid11.setText("");
+			Grid11.setBackgroundResource(R.drawable.edge);
+			break;
+		case 11:
+			// Grid12.startAnimation(blink);
+			Grid12.setText("");
+			Grid12.setBackgroundResource(R.drawable.edge);
+			break;
+		case 12:
+			// Grid13.startAnimation(blink);
+			Grid13.setText("");
+			Grid13.setBackgroundResource(R.drawable.edge);
+			break;
+		case 13:
+			// Grid14.startAnimation(blink);
+			Grid14.setText("");
+			Grid14.setBackgroundResource(R.drawable.edge);
+			break;
+		case 14:
+			// Grid15.startAnimation(blink);
+			Grid15.setText("");
+			Grid15.setBackgroundResource(R.drawable.edge);
+			break;
+		case 15:
+			// Grid16.startAnimation(blink);
+			Grid16.setText("");
+
+			Grid16.setBackgroundResource(R.drawable.edge);
+			break;
+		default:
+			;
+		}
+	}
+
+	public void ShowGrid(int animType) {
+		int i, j;
+		for (i = 0; i < freePlaces.size(); i++) 
+			{
+			Animate(freePlaces.get(i));
+			}
+		for (i = 0; i < occupiedPlaces.size(); i++) 
+			{
+			show(occupiedPlaces.get(i));
+			}
+		}
+
+	public void ShowGrids(int animType) {
+		if (ImageId[0] != 7) {
+			Grid1.setText("" + Image[getImage(ImageId[0])]);
+		}
+		if (ImageId[1] != 7) {
+			Grid2.setText("" + Image[getImage(ImageId[1])]);
+		}
+		if (ImageId[2] != 7) {
+			Grid3.setText("" + Image[getImage(ImageId[2])]);
+		}
+		if (ImageId[3] != 7) {
+			Grid4.setText("" + Image[getImage(ImageId[3])]);
+		}
+		if (ImageId[4] != 7) {
+			Grid5.setText("" + Image[getImage(ImageId[4])]);
+		}
+		if (ImageId[5] != 7) {
+			Grid6.setText("" + Image[getImage(ImageId[5])]);
+		}
+		if (ImageId[6] != 7) {
+			Grid7.setText("" + Image[getImage(ImageId[6])]);
+		}
+		if (ImageId[7] != 7) {
+			Grid8.setText("" + Image[getImage(ImageId[7])]);
+		}
+		if (ImageId[8] != 7) {
+			Grid9.setText("" + Image[getImage(ImageId[8])]);
+		}
+		if (ImageId[9] != 7) {
+			Grid10.setText("" + Image[getImage(ImageId[9])]);
+		}
+		if (ImageId[10] != 7) {
+			Grid11.setText("" + Image[getImage(ImageId[10])]);
+		}
+		if (ImageId[11] != 7) {
+			Grid12.setText("" + Image[getImage(ImageId[11])]);
+		}
+		if (ImageId[12] != 7) {
+			Grid13.setText("" + Image[getImage(ImageId[12])]);
+		}
+		if (ImageId[13] != 7) {
+			Grid14.setText("" + Image[getImage(ImageId[13])]);
+		}
+		if (ImageId[14] != 7) {
+			Grid15.setText("" + Image[getImage(ImageId[14])]);
+		}
+		if (ImageId[15] != 7) {
+			Grid16.setText("" + Image[getImage(ImageId[15])]);
+		}
+
+	}
+
+	@SuppressWarnings("unchecked")
+	public void Initiate() {
+		Grid1 = (TitanicTextView) findViewById(R.id.image1);
+		Grid2 = (TitanicTextView) findViewById(R.id.image2);
+		Grid3 = (TitanicTextView) findViewById(R.id.image3);
+		Grid4 = (TitanicTextView) findViewById(R.id.image4);
+		Grid5 = (TitanicTextView) findViewById(R.id.image5);
+		Grid6 = (TitanicTextView) findViewById(R.id.image6);
+		Grid7 = (TitanicTextView) findViewById(R.id.image7);
+		Grid8 = (TitanicTextView) findViewById(R.id.image8);
+		Grid9 = (TitanicTextView) findViewById(R.id.image9);
+		Grid10 = (TitanicTextView) findViewById(R.id.image10);
+		Grid11 = (TitanicTextView) findViewById(R.id.image11);
+		Grid12 = (TitanicTextView) findViewById(R.id.image12);
+		Grid13 = (TitanicTextView) findViewById(R.id.image13);
+		Grid14 = (TitanicTextView) findViewById(R.id.image14);
+		Grid15 = (TitanicTextView) findViewById(R.id.image15);
+		Grid16 = (TitanicTextView) findViewById(R.id.image16);
+
+		flyingimg = (ImageView) findViewById(R.id.flyingimage);
+
+		zoomIn = AnimationUtils.loadAnimation(getApplicationContext(),
+				R.anim.fade_in);
+		zoomIn = AnimationUtils.loadAnimation(getApplicationContext(),
+				android.R.anim.fade_in);
+		blink = AnimationUtils.loadAnimation(getApplicationContext(),
+				R.anim.blink);
+		slideup = AnimationUtils.loadAnimation(getApplicationContext(),
+				R.anim.slide_up);
+		slideup1 = AnimationUtils.loadAnimation(getApplicationContext(),
+				R.anim.grow_from_bottom);
+		slideup.setAnimationListener(this);
+		slideup1.setAnimationListener(this);
+
+		myScore = (TextView) findViewById(R.id.score);
+		myHighScore = (TextView) findViewById(R.id.highscore);
+		floatScore = (TextView) findViewById(R.id.scoreflow);
+
+		HighScore = getSharedPreferences("myHighScore", MODE_PRIVATE);
+		HighScoreEditor = HighScore.edit();
+
+		firstTime = HighScore.getInt("firsttime", 0);
+		highScore = HighScore.getInt("highscore", 0);
+		try {
+			if (firstTime == 1) {
+				myHighScore.setText("" + highScore);
+			}
+
+			if (firstTime == 0) {
+				HighScoreEditor.putInt("firsttime", 1);
+				HighScoreEditor.commit();
+			}
+		} catch (Exception e) {
+			Toast.makeText(getApplicationContext(), "Error : " + e.toString(),
+					Toast.LENGTH_LONG).show();
+		}
+
+		for (int i = 0; i < 6; i++) {
+			randCout.put(i, 0);
+		}
+		
+		
+		
+		bgimg=ColorCode.getColorValue(country_pos-1);
+		bgimgplace=ColorCode.getColorPosition(country_pos-1);
+//Toast.makeText(getApplicationContext(), ""+bgimgplace[0]+" "+bgimgplace[1]+" "+bgimgplace[2], Toast.LENGTH_LONG).show();
+	}
+
+	@SuppressWarnings("unchecked")
+	public void Initial_Setup() {
+
+		int i = 0;
+		for (i = 0; i < 16; i++) {
+			freePlaces.add(i);
+		}
+
+		rand = new Random();
+		rand1 = new Random();
+		rand2 = new Random();
+		newrand = new Random();
+
+		int_rand1 = rand.nextInt(16);
+
+		occupiedPlaces.add(int_rand1);
+		freePlaces.remove(freePlaces.indexOf((int_rand1)));
+
+		int_img_rand1 = 1;
+		//ShowGrids(5);
+
+		ImageId[int_rand1] = int_img_rand1;
+
+		randCout.put(int_img_rand1, 1);
+		randCout.put(int_img_rand2, 1);
+
+		//ShowGrids(5);
+
+	}
+
+	public void removeAndAnimate(int position, int rcFlag) {
+		int i = 0, start = 0, end = 0, inc = 0;
+		if (rcFlag == 1) {
+			switch (position) {
+
+			case 1:
+				start = 0;
+				end = 4;
+				inc = 1;
+				break;
+			case 2:
+				start = 4;
+				end = 8;
+				inc = 1;
+				break;
+			case 3:
+				start = 8;
+				end = 12;
+				inc = 1;
+				break;
+			case 4:
+				start = 12;
+				end = 16;
+				inc = 1;
+				break;
+			default:
+				;
+
+			}
+
+		} else if (rcFlag == 2) {
+			switch (position) {
+
+			case 1:
+				start = 0;
+				end = 16;
+				inc = 4;
+				break;
+			case 2:
+				start = 1;
+				end = 17;
+				inc = 4;
+				break;
+			case 3:
+				start = 2;
+				end = 18;
+				inc = 4;
+				break;
+			case 4:
+				start = 3;
+				end = 19;
+				inc = 4;
+				break;
+			default:
+				;
+
+			}
+		}
+		for (i = start; i < end; i = i + inc) {
+			if (ImageId[i] != 7)
+
+			{
+				ImageId[i] = 7;
+
+				freePlaces.add(i);
+				occupiedPlaces.remove(occupiedPlaces.indexOf(i));
+			}
+		}
+		ShowGrid(rcFlag);
+
+	}
+
+	public void freeOccupiedPlaces(int position, int swipeID) {
+		int roworcolumnId = 0, rcFlag = 0;
+		if (swipeID == 1 || swipeID == 2) {
+			roworcolumnId = (position / 4) + 1;
+			rcFlag = 1;
+		} else if (swipeID == 3 || swipeID == 4) {
+			roworcolumnId = (position % 4) + 1;
+			rcFlag = 2;
+		}
+
+		removeAndAnimate(roworcolumnId, rcFlag);
+
+	}
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.refer1);
+		//setContentView(R.layout.secondworld);
+		
+		Intent myintent1=getIntent();
+		country_pos=myintent1.getIntExtra("CountryValue",0);
+	//	Toast.makeText(getApplicationContext(), "Country Value : "+country_pos, Toast.LENGTH_LONG).show();
+
+		Initiate();
+		Initial_Setup();
+		set = createAnimation();
+		//new Titanic().start(Grid1);
+
+		// Detect touched area
+		detector = new SimpleGestureFilter(this, this);
+		
+		set.addListener(new AnimatorListener() {
+			
+			@Override
+			public void onAnimationStart(Animator arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onAnimationRepeat(Animator arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onAnimationEnd(Animator arg0) {
+				// TODO Auto-generated method stub
+			
+			
+			floatScore.setVisibility(View.INVISIBLE);
+			floatScore.setText("");
+			
+			}
+			
+			@Override
+			public void onAnimationCancel(Animator arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+
+
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean dispatchTouchEvent(MotionEvent me) {
+		// Call onTouchEvent of SimpleGestureFilter class
+		this.detector.onTouchEvent(me);
+		return super.dispatchTouchEvent(me);
+	}
+	
+	private AnimatorSet createAnimation() 
+	
+	{
+
+		int top_Y = 20;
+		animation1 = ObjectAnimator.ofFloat(floatScore, "y", top_Y);
+		animation1.setDuration(1000);
+		AnimatorSet set = new AnimatorSet();
+		set.playTogether(animation1);
+		return set;
+
+	}
+
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public void onSwipe(int direction) {
+		String str = "";
+		int flag = 0, flag1 = 0;
+
+		if (liveflag)
+
+		{
+
+			int fl = isPossibleMove();
+			if (occupiedPlaces.size() == 16 && fl == 0) {
+				Toast.makeText(getApplicationContext(), "Game Over",
+						Toast.LENGTH_LONG).show();
+			} else {
+
+				switch (direction) {
+
+				case SimpleGestureFilter.SWIPE_RIGHT:
+					str = "Swipe Right";
+					swipeId = 2;
+					break;
+				case SimpleGestureFilter.SWIPE_LEFT:
+					str = "Swipe Left";
+					swipeId = 1;
+					break;
+				case SimpleGestureFilter.SWIPE_DOWN:
+					str = "Swipe Down";
+					swipeId = 4;
+					break;
+				case SimpleGestureFilter.SWIPE_UP:
+					str = "Swipe Up";
+					swipeId = 3;
+					break;
+
+				}
+
+				int isCollide = CheckCollision(swipeId);
+				int isMoved = MoveGrid(swipeId);
+
+				if (isMoved == 1 || isCollide == 1) // Movement Takes Place
+				{
+
+					while (true) {
+
+						int_rand = rand.nextInt(16);
+
+						if (occupiedPlaces.contains(int_rand)) {
+							int_rand = rand.nextInt(16);
+						}
+
+						else {
+							break;
+						}
+
+					}
+
+					int rand_choice;
+					Random r = new Random();
+
+					if (freePlaces.size() <= 5) {
+						rand_choice = r.nextInt(100);
+						if (rand_choice % 3 == 0) {
+							ImageId[int_rand] = 2;
+						} else {
+							ImageId[int_rand] = 1;
+						}
+					} else {
+						ImageId[int_rand] = 1;
+					}
+
+					show(int_rand);
+					occupiedPlaces.add(int_rand);
+
+				}
+				int win = checkWin();
+
+			}
+
+		}
+	}
+
+	@Override
+	public void onDoubleTap() {
+
+	}
+	
+
+	@Override
+	public void onAnimationEnd(Animation arg0) {
+		// TODO Auto-generated method stub
+		if (arg0.equals(slideup)) {
+			floatScore.setText("");
+		}
+		if (arg0.equals(slideup1)) {
+			flyingimg.setBackgroundResource(0);
+		}
+
+	}
+
+	@Override
+	public void onAnimationRepeat(Animation arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onAnimationStart(Animation arg0) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	
+
+}

@@ -1,0 +1,224 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+ <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="Widget" />
+    
+    <style name="Widget.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse" />
+    
+    <style name="Widget.Light" />
+    
+    <style name="Widget.Light.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid" />
+
+    <style name="Widget.ActionBar.Transparent">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    
+    <style name="MenuDrawer" />
+
+    <style name="MenuDrawer.Widget" />
+
+    <style name="MenuDrawer.Widget.Category">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:attr/textColorSecondaryInverse</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+		<item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:background">@drawable/md__category_background</item>
+
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    
+    <style name="box_text">
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:gravity">fill_vertical</item>
+        <item name="android:paddingLeft">8.0dp</item>
+        <item name="android:paddingTop">8.0dp</item>
+        <item name="android:paddingBottom">8.0dp</item>
+        <item name="android:maxLines">1000</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:inputType">textCapSentences</item>
+    </style>
+    
+    
+    <style name="MenuDrawer.Widget.Title">
+        <item name="android:background">@drawable/md__list_selector_holo_dark</item>
+        <item name="android:textAppearance">?android:attr/textAppearance</item>
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">32dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="MenuDrawerStyle" parent="Widget.MenuDrawer">
+        <item name="mdActiveIndicator">@drawable/menu_arrow</item>
+        <item name="mdMenuSize">250dp</item>
+    </style>
+
+    <style name="MenuDrawerStyle.Right" parent="Widget.MenuDrawer">
+        <item name="mdActiveIndicator">@drawable/menu_arrow_right</item>
+        <item name="mdMenuSize">150dp</item>
+    </style>
+
+    <style name="MenuDrawerStyle.Top" parent="Widget.MenuDrawer">
+        <item name="mdActiveIndicator">@drawable/menu_arrow_top</item>
+        <item name="mdMenuSize">64dp</item>
+        <item name="mdAllowIndicatorAnimation">true</item>
+    </style>
+
+    <style name="MenuDrawerStyle.Bottom" parent="Widget.MenuDrawer">
+        <item name="mdActiveIndicator">@drawable/menu_arrow_bottom</item>
+        <item name="mdMenuSize">64dp</item>
+    </style>
+    <style name="Animations" />
+
+	<!-- PopDownMenu -->
+	<style name="Animations.PopDownMenu" />
+	
+	<style name="Animations.PopDownMenu.Left">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_topleft_to_bottomright</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_bottomright_to_topleft</item>
+	</style>
+	
+	<style name="Animations.PopDownMenu.Right">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_topright_to_bottomleft</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_bottomleft_to_topright</item>
+	</style>
+	
+	<style name="Animations.PopDownMenu.Center">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_top</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_bottom</item>
+	</style>
+	
+	<!-- PopUpMenu -->
+	<style name="Animations.PopUpMenu" />
+	
+	<style name="Animations.PopUpMenu.Left">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_bottomleft_to_topright</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_topright_to_bottomleft</item>
+	</style>
+	
+	<style name="Animations.PopUpMenu.Right">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_bottomright_to_topleft</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_topleft_to_bottomright</item>
+	</style>
+	
+	<style name="Animations.PopUpMenu.Center">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_bottom</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_top</item>
+	</style>
+	<!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <style name="Animations"/>
+	
+	<style name="Animations.PopDownMenuRight">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_topright_to_bottomleft</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_bottomleft_to_topright</item>
+	</style>
+
+	
+	<style name="Animations.PopDownMenuLeft">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_topleft_to_bottomright</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_bottomright_to_topleft</item>
+	</style>
+	
+
+	<style name="Animations.GrowFromBottomRight">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_bottomright_to_topleft</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_topleft_to_bottomright</item>
+	</style>
+
+
+	<style name="Animations.GrowFromBottom">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_bottom</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_top</item>
+	</style>
+	
+	<style name="Animations.GrowFromTop">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_top</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_bottom</item>
+	</style>
+    
+    <style name="Anim">
+        <item name="android:windowEnterAnimation">@anim/rail</item>
+       
+    </style>
+    
+    
+    
+    <style name="PauseDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/PauseDialogAnimation</item>
+    </style>
+
+    <style name="PauseDialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+    </style>
+    
+     <style name="TransparentTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:actionBarStyle">@style/ActionBarStyle.Transparent</item>
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="ActionBarStyle.Transparent" parent="@android:Widget.ActionBar">
+        <item name="android:background">@null</item>
+        <item name="android:displayOptions">homeAsUp|showHome|showTitle</item>
+        <item name="android:titleTextStyle">@style/ActionBarStyle.Transparent.TitleTextStyle</item>
+    </style>
+
+    <style name="ActionBarStyle.Transparent.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    
+    
+</resources>

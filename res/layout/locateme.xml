@@ -1,0 +1,132 @@
+
+    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".NavigationActivity" >
+	<LinearLayout
+	    android:id="@+id/mylayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="100dp"
+	  >
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+	  
+	    
+    <fragment
+    	android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+
+    <ImageButton
+        android:id="@+id/checkIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="145dip"
+        android:layout_marginTop="40dip"
+        android:background="@drawable/logo1" />
+
+    </FrameLayout>
+</LinearLayout>
+
+
+<LinearLayout
+    android:id="@+id/mylayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/venueimage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#d0d0d0" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp" >
+
+                <ImageView
+                    android:id="@+id/eventplace"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_card"
+                    android:scaleType="centerCrop"
+                    >
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/mapToastmsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginBottom="20dip"
+                    android:background="#AA000000"
+                    android:padding="12dip"
+                    android:text="VENUE : Room number 121(1st Floor), Vivek Auditorium"
+                    android:textColor="#ffffffff" />
+            </FrameLayout>
+
+            <!-- Card Contents go here -->
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/venueimage1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/venueimage"
+        android:background="#d0d0d0" >
+
+        <LinearLayout
+            android:id="@+id/navigateme"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/bNavigation"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/mylocation"
+                android:scaleType="centerCrop" />
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="0.91"
+                android:text="            Take Me There"
+               android:textStyle="bold|italic"
+               android:textColor="#2288bb"
+                android:gravity="left|fill_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+        
+
+    </FrameLayout>
+
+    
+</LinearLayout>
+</LinearLayout>
+

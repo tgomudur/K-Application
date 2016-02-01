@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardImage"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="#d0d0d0" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+              android:background="@drawable/bg_card"
+        android:orientation="vertical" >
+        <!--  android:layout_marginBottom="6dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="6dp"-->
+  
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="0dp"
+            android:background="@color/background"
+            android:gravity="center"
+            android:minHeight="200dp"
+            android:padding="2dp" />
+        <!-- android:minHeight="@dimen/grid_item_height" -->
+    </LinearLayout>
+
+</FrameLayout>
